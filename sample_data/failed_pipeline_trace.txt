@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/app/pipeline/stages/parse.py", line 42, in parse_dates
+    df["signup_date"] = pd.to_datetime(df["signup_date"], errors="raise")
+  File "/usr/lib/python3.11/site-packages/pandas/core/tools/datetimes.py", line 1050, in to_datetime
+    result = convert_listlike(arg._values, format)
+  File "/usr/lib/python3.11/site-packages/pandas/core/tools/datetimes.py", line 401, in _convert_listlike_datetimes
+    raise ValueError(msg)
+ValueError: time data "not-a-date" doesn't match format "%Y-%m-%d"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/app/pipeline/runner.py", line 118, in _run_stage
+    stage_func(df, ctx)
+  File "/app/pipeline/stages/parse.py", line 55, in parse_dates
+    df.loc[idx, "signup_date"] = pd.to_datetime(row, format="%Y-%m-%d")
+  File "/usr/lib/python3.11/site-packages/pandas/core/indexing.py", line 909, in __setitem__
+    self.obj._setitem_single_column(loc, value, pi)
+KeyError: 'signup_date'

@@ -1,0 +1,19 @@
+2024-06-01 10:00:01,000 - MainThread - INFO - Starting pipeline with 3 workers
+2024-06-01 10:00:01,100 - Worker-1 - INFO - attempting to acquire lock_a
+2024-06-01 10:00:01,101 - Worker-1 - INFO - acquired lock_a
+2024-06-01 10:00:01,120 - Worker-2 - INFO - attempting to acquire lock_b
+2024-06-01 10:00:01,121 - Worker-2 - INFO - acquired lock_b
+2024-06-01 10:00:01,200 - Worker-1 - INFO - waiting for lock_b
+2024-06-01 10:00:01,210 - Worker-2 - INFO - waiting for lock_a
+2024-06-01 10:00:05,300 - Worker-1 - WARNING - still waiting for lock_b
+2024-06-01 10:00:05,310 - Worker-2 - WARNING - still waiting for lock_a
+2024-06-01 10:00:10,400 - Worker-1 - ERROR - timeout waiting for lock_b
+2024-06-01 10:00:10,410 - Worker-2 - ERROR - timeout waiting for lock_a
+2024-06-01 10:00:10,500 - Worker-3 - INFO - acquired lock_c
+2024-06-01 10:00:10,510 - Worker-3 - INFO - released lock_c
+2024-06-01 10:00:15,000 - MainThread - ERROR - Possible race condition detected in aggregation counter
+2024-06-01 10:00:15,010 - MainThread - ERROR - expected 20 but got 17 rows in output
+2024-06-01 10:00:15,100 - Worker-1 - ERROR - Retry attempt 1 for lock_b
+2024-06-01 10:00:15,200 - Worker-1 - ERROR - Retry attempt 2 for lock_b
+2024-06-01 10:00:15,300 - Worker-2 - ERROR - Retry attempt 1 for lock_a
+2024-06-01 10:00:15,400 - Worker-1 - ERROR - Traceback (most recent call last):

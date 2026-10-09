@@ -1,0 +1,21 @@
+customer_id,full_name,email,signup_date,age,country,tier,lifetime_value
+C001,Alice Johnson,alice@example.com,2023-01-15,34,US,gold,1520.50
+C002,Bob Smith,bob.smith@example,2023-02-03,45,US,silver,300.00
+C003,Carol Diaz,carol@example.com,2023-02-20,-7,CA,gold,880.10
+C004,Dan Lee,,2023-03-01,29,US,bronze,150.00
+C005,Eve Park,eve@example.com,not-a-date,41,GB,gold,2200.00
+C006,Frank Ray,frank@example.com,2023-04-11,52,US,silver,410.75
+C007,Gina Moss,gina@example.com,2023-04-11,52,US,silver,410.75
+C008,Hank Wu,hank@example.com,2023-05-02,,DE,bronze,95.00
+C009,Ivy Chen,ivy@example.com,2023-05-19,38,US,platinum,5000.00
+C010,Jack Ford,jack@example.com,2023-06-01,999,US,gold,1200.00
+C011,Kate Lin,kate@example.com,2023-06-05,27,US,gold,750.00
+C012,Leo Marx,leo@example.com,2023-06-18,33,US,silver,320.40
+C013,Mia Nova,mia@example.com,2023-07-01,44,FR,gold,910.90
+C014,Ned Polk,ned@example.com,2023-07-21,61,US,bronze,120.00
+C015,Ola Reed,ola@example.com,2023-07-30,25,US,gold,1010.10
+C001,Alice Johnson,alice@example.com,2023-01-15,34,US,gold,1520.50
+C016,Pat Quinn,pat@example.com,2023-08-05,38,US,silver,260.00
+C017,Quinn Ross,quinn@example.com,2023-08-09,47,CA,gold,890.00
+C018,Rae Stone,rae@example.com,2023-08-15,29,US,unknown,300.00
+C019,Sam Turner,sam@example.com,2023-08-25,33,US,gold,1400.00

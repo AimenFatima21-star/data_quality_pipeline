@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Project artifacts
+output/
+output_tiny/
+run.log
+*.log
+
+# Scratch / local experiments
+tiny.csv
+tiny_config.json
+my_config.json
+
+# OS
+.DS_Store
+Thumbs.db
+!sample_data/*.log

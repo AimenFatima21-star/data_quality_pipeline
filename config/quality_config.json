@@ -1,0 +1,82 @@
+{
+  "dataset_name": "customers",
+  "log_level": "INFO",
+  "log_file": null,
+  "max_workers": 4,
+  "missing_tokens": [
+    "",
+    "na",
+    "n/a",
+    "nan",
+    "null",
+    "none",
+    "-",
+    "?"
+  ],
+  "severity_thresholds": {
+    "critical": 20.0,
+    "high": 10.0,
+    "medium": 2.0
+  },
+  "check_duplicate_rows": true,
+  "check_outliers": true,
+  "outlier_iqr_multiplier": 3.0,
+  "sample_size": 5,
+  "required_columns": [
+    "customer_id",
+    "email",
+    "signup_date"
+  ],
+  "columns": {
+    "customer_id": {
+      "type": "string",
+      "nullable": false,
+      "unique": true,
+      "regex": "C\\d{3}"
+    },
+    "full_name": {
+      "type": "string",
+      "nullable": false,
+      "min_length": 3
+    },
+    "email": {
+      "type": "string",
+      "nullable": false,
+      "regex": "[^@\\s]+@[^@\\s]+\\.[A-Za-z]{2,}"
+    },
+    "signup_date": {
+      "type": "datetime",
+      "nullable": false
+    },
+    "age": {
+      "type": "integer",
+      "nullable": true,
+      "min": 0,
+      "max": 120
+    },
+    "country": {
+      "type": "string",
+      "allowed_values": [
+        "US",
+        "CA",
+        "GB",
+        "DE",
+        "FR"
+      ]
+    },
+    "tier": {
+      "type": "string",
+      "allowed_values": [
+        "bronze",
+        "silver",
+        "gold",
+        "platinum"
+      ]
+    },
+    "lifetime_value": {
+      "type": "numeric",
+      "min": 0.0
+    }
+  },
+  "referential_integrity": []
+}
